@@ -2,6 +2,7 @@
 # The file hpc-feb2007 was created from the original file 
 # household_power_consumption.txt by
 # extracting only the data for 1st and 2nd February 2007
+# The file hpc-feb2007 is available in the git repository for reference
 #
 t <- read.csv2("../../hpc-feb2007", sep=";", dec=".", na.strings = c("?"))
 
