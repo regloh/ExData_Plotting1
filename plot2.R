@@ -19,10 +19,10 @@ dd<-cbind (as.data.frame(dt), t)
 
 
 # Creating the plot without drawing it. The labels for x-axis have been suppressed
-plot(dd$dt, dd$Global_active_power, type="n", xlab="", ylab= "Global Active Power (kilowatts)", xaxt="n")
+plot(dd$dt, dd$Global_active_power, type="l", xlab="", ylab= "Global Active Power (kilowatts)", xaxt="n")
 
 # drawing the lines
-lines(dd$dt, dd$Global_active_power)
+# lines(dd$dt, dd$Global_active_power)
 
 # Some preparation for x-axis labels
 day1="2007-02-01 00:00:00"
