@@ -4,7 +4,7 @@
 # extracting only the data for 1st and 2nd February 2007
 # The file hpc-feb2007 is available in the git repository for reference
 #
-t <- read.csv2("../../hpc-feb2007", sep=";", dec=".", na.strings = c("?"))
+t <- read.csv2("hpc-feb2007", sep=";", dec=".", na.strings = c("?"))
 
 png(filename="plot1.png", width = 480, height = 480, units = "px")
 

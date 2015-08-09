@@ -18,12 +18,10 @@ dt<-as.POSIXct(dt2, tz="UTC", "%d/%m/%Y %H:%M:%S")
 dd<-cbind (as.data.frame(dt), t)
 
 
-# Creating the plot without drawing it. The labels for x-axis have been suppressed
-#plot(dd$dt, dd$Sub_metering_1, type="n", xlab="", ylab="Energy sub metering", xaxt="n")
+# Creating the plot. The labels for x-axis have been suppressed
 plot(dd$dt, dd$Sub_metering_1, type="l", xlab="", ylab="Energy sub metering", xaxt="n")
 
-# drawing the lines
-#lines(dd$dt, dd$Sub_metering_1, col="black")
+# drawing the additional lines
 lines(dd$dt, dd$Sub_metering_2, col="red")
 lines(dd$dt, dd$Sub_metering_3, col="blue")
 

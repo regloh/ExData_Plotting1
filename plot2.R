@@ -4,7 +4,7 @@
 # extracting only the data for 1st and 2nd February 2007
 # The file hpc-feb2007 is available in the git repository for reference
 #
-t <- read.csv2("../../hpc-feb2007", sep=";", dec=".", na.strings = c("?"))
+t <- read.csv2("hpc-feb2007", sep=";", dec=".", na.strings = c("?"))
 
 png(filename="plot2.png", width = 480, height = 480, units = "px")
 
@@ -18,11 +18,8 @@ dt<-as.POSIXct(dt2, tz="UTC", "%d/%m/%Y %H:%M:%S")
 dd<-cbind (as.data.frame(dt), t)
 
 
-# Creating the plot without drawing it. The labels for x-axis have been suppressed
+# Creating the plot. The labels for x-axis have been suppressed
 plot(dd$dt, dd$Global_active_power, type="l", xlab="", ylab= "Global Active Power (kilowatts)", xaxt="n")
-
-# drawing the lines
-# lines(dd$dt, dd$Global_active_power)
 
 # Some preparation for x-axis labels
 day1="2007-02-01 00:00:00"
